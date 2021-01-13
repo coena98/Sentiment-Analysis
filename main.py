@@ -4,7 +4,7 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 def predict(message):
-	model=load_model('movie.h5')
+	model=load_model('model.h5')
 	with open('tokenizer.pickle', 'rb') as handle:
 		tokenizer = pickle.load(handle)
 		x_1 = tokenizer.texts_to_sequences([message])
